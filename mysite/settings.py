@@ -11,23 +11,23 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-import requests
+# import requests
 
 
-my_domain = 'julianyraiol.pythonanywhere.com'
-username = 'julianyraiol'
-token = '9dce71a8c10ce16bb1c81e1b7a1402e11aade9a4'
+# my_domain = 'julianyraiol.pythonanywhere.com'
+# username = 'julianyraiol'
+# token = '9dce71a8c10ce16bb1c81e1b7a1402e11aade9a4'
 
-response = requests.post(
-    'https://www.pythonanywhere.com/api/v0/user/{username}/webapps/{domain}/reload/'.format(
-        username=username, domain=my_domain
-    ),
-    headers={'Authorization': 'Token {token}'.format(token=token)}
-)
-if response.status_code == 200:
-    print('All OK')
-else:
-    print('Got unexpected status code {}: {!r}'.format(response.status_code, response.content))
+# response = requests.post(
+#     'https://www.pythonanywhere.com/api/v0/user/{username}/webapps/{domain}/reload/'.format(
+#         username=username, domain=my_domain
+#     ),
+#     headers={'Authorization': 'Token {token}'.format(token=token)}
+# )
+# if response.status_code == 200:
+#     print('All OK')
+# else:
+#     print('Got unexpected status code {}: {!r}'.format(response.status_code, response.content))
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
